@@ -52,7 +52,7 @@ $config = [
 php artisan vendor:publish --provider="Hbl\DingTalk\ServiceProvider"
 ```
 
-> 这里会生成两个配置文件，分别为phpsms.php和laravel-sms.php。
+> 这里会生成一个配置文件，ding-talk.php。
 
 ## 3.用法
 
