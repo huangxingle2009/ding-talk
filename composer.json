@@ -1,0 +1,25 @@
+{
+    "name": "hbl/ding-talk",
+    "description": "ding talk sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wuque",
+            "email": "3314308761@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Hbl\\DingTalk\\": "src"
+        },
+        "files": ["src/sdk/TopSdk.php"]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hbl\\DingTalk\\ServiceProvider"
+            ]
+        }
+    }
+}
