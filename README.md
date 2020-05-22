@@ -1,15 +1,15 @@
-<h1 align="center"> dingTalk </h1>
+<h1 align="center"> laravel - ding-talk </h1>
 
-<p align="center"> ding talk sdk.</p>
+<p align="center"> 二维码授权登录 以及获取用户信息.</p>
 
 
-## Installing
+## 1.安装
 
 ```shell
 $ composer require hbl/dingTalk
 ```
 
-## 配置
+## 2.1配置说明
 ```
 $config = [
     /*
@@ -43,10 +43,20 @@ $config = [
 
 ```
 
-## Usage
+
+### 2.2参数生成
+
+- 生成配置文件
+
+```php
+php artisan vendor:publish --provider="Hbl\DingTalk\ServiceProvider"
+```
+
+> 这里会生成两个配置文件，分别为phpsms.php和laravel-sms.php。
+
+## 3.用法
 
 ```shell
-
 
     public function test(Request $request)
     {
