@@ -9,19 +9,67 @@
 $ composer require hbl/dingTalk
 ```
 
+## 配置
+```
+$config = [
+    /*
+    |-----------------------------------------------------------
+    | 【必填】企业 corpId
+    |-----------------------------------------------------------
+    */
+    'corp_id' => 'ding01ce46a1354ee68635c2f4657eb6378f',
+
+    /*
+    |-----------------------------------------------------------
+    | 【必填】应用 AppKey
+    |-----------------------------------------------------------
+    */
+    'app_key' => 'dingoar2mqmjjuk8uaa4qk',
+
+    /*
+    |-----------------------------------------------------------
+    | 【必填】应用 AppSecret
+    |-----------------------------------------------------------
+    */
+    'app_secret' => 'SXo56RIJHwy_gTE7RfP2k1Y3H54Mzsw68_9N4AXwC_9Omh4DLBh9ggxa3ejwcrBP',
+
+    /*
+    |-----------------------------------------------------------
+    | 【必填】应用 回调地址
+    |-----------------------------------------------------------
+     */
+    'redirect_uri' => 'https://admindev.ling7.net/api/auth/callback',
+];
+
+```
+
 ## Usage
 
-TODO
+```shell
 
-## Contributing
 
-You can contribute in one of three ways:
+    public function test(Request $request)
+    {
+        $url = app("DingTalk")->getUrl();
+        try {
+            app("DingTalk")->getUserInfoByCode("code");
+        } catch(Exception $e) {
+            dd($e);
+        }
+    }
+    
+    
+    public function test2(Request $request, DingTalk $ding)
+    {
+        try {
+            return $ding->getUserInfoByCode("code");
+         } catch(Exception $e) {
+            dd($e);
+        }
+    }
 
-1. File bug reports using the [issue tracker](https://github.com/hbl/dingTalk/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/hbl/dingTalk/issues).
-3. Contribute new features or update the wiki.
+```
 
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
 
 ## License
 
