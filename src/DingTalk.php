@@ -20,8 +20,7 @@ class DingTalk
 
     public function getUrl() {
         $config = $this->config;
-        return $this->host . 'connect/qrconnect?appid='.$config['app_key'].'&response_type=code&scope
-            =snsapi_login&state=STATE&redirect_uri='. $config['redirect_uri'];
+        return $this->host . 'connect/qrconnect?appid='.$config['app_key'].'&response_type=code&scope=snsapi_login&state=STATE&redirect_uri='. $config['redirect_uri'];
     }
 
 
