@@ -6,7 +6,7 @@
 ## 1.安装
 
 ```shell
-$ composer require hbl/dingTalk
+$ composer require hbl/ding-talk
 ```
 
 ## 2.1配置说明
